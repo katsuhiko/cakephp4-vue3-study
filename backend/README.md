@@ -6,6 +6,7 @@
 cd backend
 docker-compose up -d
 
+docker-compose exec app bin/cake migrations migrate
 docker-compose exec app php composer.phar test
 
 docker-compose down
