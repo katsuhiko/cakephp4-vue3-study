@@ -27,3 +27,7 @@ git remote add origin git@github.com:katsuhiko/cakephp4-vue3-study.git
 git push -u origin main
 ```
 
+```
+docker-compose exec app php composer.phar require --dev mockery/mockery
+docker-compose exec app php composer.phar require robinvdvleuten/ulid
+```
