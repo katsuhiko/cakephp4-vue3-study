@@ -17,7 +17,7 @@ final class SampleRepository implements ISampleRepository
      */
     public function save(Sample $sample): bool
     {
-        $Samples = $this->getTableLocator()->get('SampleSamples');
+        $Samples = $this->getTableLocator()->get('Tasks');
 
         /** @var ?\App\Model\Entity\SampleSample $entity */
         $entity = $Samples->find()->where(['id' => $sample->getSampleId()->asString()])->first();
@@ -43,7 +43,7 @@ final class SampleRepository implements ISampleRepository
      */
     public function remove(SampleId $sampleId): bool
     {
-        $Samples = $this->getTableLocator()->get('SampleSamples');
+        $Samples = $this->getTableLocator()->get('Tasks');
 
         /** @var ?\App\Model\Entity\SampleSample $entity */
         $entity = $Samples->find()->where(['id' => $sampleId->asString()])->first();
@@ -64,7 +64,7 @@ final class SampleRepository implements ISampleRepository
      */
     public function findById(SampleId $sampleId): ?Sample
     {
-        $Samples = $this->getTableLocator()->get('SampleSamples');
+        $Samples = $this->getTableLocator()->get('Tasks');
 
         /** @var ?\App\Model\Entity\SampleSample $entity */
         $entity = $Samples->find()->where(['id' => $sampleId->asString()])->first();
@@ -84,7 +84,7 @@ final class SampleRepository implements ISampleRepository
      */
     public function findAll(): array
     {
-        $Samples = $this->getTableLocator()->get('SampleSamples');
+        $Samples = $this->getTableLocator()->get('Tasks');
 
         /** @var \App\Model\Entity\SampleSample[] $entities */
         $entities = $Samples->find()->all()->toList();
