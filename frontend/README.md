@@ -1,4 +1,4 @@
-# fronted
+# Application
 
 ## Project setup
 ```
