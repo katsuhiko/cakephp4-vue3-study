@@ -1,10 +1,10 @@
 module.exports = {
   devServer: {
     proxy: {
-      '^/api': {
-        target: 'http://localhost',
-        logLevel: 'debug',
+      "^/api": {
+        target: "http://localhost",
+        logLevel: "debug",
       },
     },
   },
-}
+};
